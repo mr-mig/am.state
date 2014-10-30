@@ -1,11 +1,14 @@
 {
   "name": "am.state",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Behaviour abstraction for ambitious framework.",
   "main": "index.js",
   "scripts": {
     "test": "test"
   },
   "author": "Mr_Mig",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "am.convention": "git://github.com/mr-mig/am.convention"
+  }
 }
