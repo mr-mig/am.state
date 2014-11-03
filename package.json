@@ -1,6 +1,6 @@
 {
   "name": "am.state",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Behaviour abstraction for ambitious framework.",
   "main": "index.js",
   "scripts": {
