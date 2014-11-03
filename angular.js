@@ -7,6 +7,14 @@ module.exports = function () {
   var args = Array.prototype.slice.call(arguments, 0);
   var result = stateFactory.apply(null, args);
 
+  // try to get the module first
+  // this is the case when state is created for a structure entity like element
+  try{
+    angular.module(result.moduleName);
+  } catch(e) {
+    angular.module(result.moduleName, []);
+  }
+
   return angular.module(result.moduleName)
     .factory(result.entityName, result.factoryFn);
 };
