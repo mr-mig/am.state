@@ -10,8 +10,10 @@ function stateFactory(componentType, definition, obj) {
   return {
     moduleName: moduleName,
     entityName: stateName,
-    factoryFn: function () {
-      return obj;
+    factoryFn: function(){
+      return function stateConstructor() {
+        return obj;
+      };
     }
   };
 }
