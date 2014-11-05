@@ -12,7 +12,7 @@ module.exports = function () {
   try{
     angular.module(result.moduleName);
   } catch(e) {
-    angular.module(result.moduleName, []);
+    angular.module(result.moduleName, result.moduleDependencies);
   }
 
   return angular.module(result.moduleName)
