@@ -14,7 +14,8 @@ function stateFactory(componentType, definition, obj) {
     moduleDependencies: definition.ngDeps,
     factoryFn: function(){
       return function stateConstructor() {
-        return obj;
+        // create an instance using the obj as a schema
+        return Object.create(obj);
       };
     }
   };
